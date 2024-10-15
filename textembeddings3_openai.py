@@ -89,3 +89,21 @@ with pd.ExcelWriter(output_name) as writer:
         sheet_name = f'Sheet{i+1}'
         
         df.to_excel(writer, index=False, sheet_name=sheet_name)
+<<<<<<< HEAD
+=======
+
+#%% 
+from openai import OpenAI
+client = OpenAI(api_key = "your API keys")
+completion = client.chat.completions.create(
+  model="gpt-4o",
+  messages=[
+      {"role": "user", "content": f"Based on the abstract, summarize what chemical reaction the article is about and what catalyst is used. The abstrac: {dfs_results[0].iloc[0,1]}"}
+  ]
+)
+
+# ChatCompletionMessage(content='The article discusses a chemical reaction within sodium–sulfur batteries, specifically addressing the issue of sodium polysulfide dissolution, which affects the longevity of these batteries. The study involves a N,O-codoped carbon composite derived from a bimetallic Cu–Zn metal-organic framework as a stable sulfur host. This composite includes single-atom copper catalysts, with a high copper loading, which play a crucial role. The single-atom copper sites can weaken the S–S bonds in the S8 ring structure, catalyzing the formation of short-chain sulfur molecules and facilitating the conversion between short-chain sulfur and Na2S. Consequently, this setup allows the battery to achieve superior capacity and high sulfur utilization, enhancing its performance and cycle life.', role='assistant', function_call=None, tool_calls=None, refusal=None)
+print(completion.choices[0].message.content)
+
+# The article discusses a chemical reaction within sodium–sulfur batteries, specifically addressing the issue of sodium polysulfide dissolution, which affects the longevity of these batteries. The study involves a N,O-codoped carbon composite derived from a bimetallic Cu–Zn metal-organic framework as a stable sulfur host. This composite includes single-atom copper catalysts, with a high copper loading, which play a crucial role. The single-atom copper sites can weaken the S–S bonds in the S8 ring structure, catalyzing the formation of short-chain sulfur molecules and facilitating the conversion between short-chain sulfur and Na2S. Consequently, this setup allows the battery to achieve superior capacity and high sulfur utilization, enhancing its performance and cycle life.
+>>>>>>> 1629d36 (Third modified)

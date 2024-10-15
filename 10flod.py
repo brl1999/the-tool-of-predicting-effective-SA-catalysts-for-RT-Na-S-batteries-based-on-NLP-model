@@ -8,6 +8,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import make_scorer, accuracy_score, precision_score, f1_score, roc_auc_score, average_precision_score
 from sklearn.model_selection import cross_validate
 
+<<<<<<< HEAD
 # # Assume the data is already loaded into a DataFrame
 # # For example, using the pd.read_excel() method to load data from a file
 file_path = 'ceshiji3_emb.xlsx'  # Replace with your Excel file path
@@ -16,6 +17,16 @@ data = pd.read_excel(file_path)
 embeddings = np.load('./ceshiji3.npy')
 
 file_path = 'ceshiji3.xlsx'  # Replace with your Excel file path
+=======
+
+# # Assume the data is already loaded into a DataFrame
+# # For example, using the pd.read_excel() method to load data from a file
+
+
+embeddings = np.load('./resources/ceshiji3.npy')
+
+file_path = './resources/ceshiji3_emb.xlsx'  # Replace with your Excel file path
+>>>>>>> 1629d36 (Third modified)
 data = pd.read_excel(file_path)
 
 labels = data['Label'].values
