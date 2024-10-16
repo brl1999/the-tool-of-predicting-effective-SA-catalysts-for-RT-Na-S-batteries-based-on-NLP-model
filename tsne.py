@@ -3,13 +3,8 @@ import pandas as pd
 from sklearn.manifold import TSNE
 
 # Load .npy files
-<<<<<<< HEAD
-array1 = np.load('./prediction.npy')
-array2 = np.load('./240820.npy')
-=======
 array1 = np.load('./resources/prediction.npy')
 array2 = np.load('./resources/240820.npy')
->>>>>>> 1629d36 (Third modified)
 
 # Concatenate two arrays, assuming concatenation along rows (i.e., vertical merge)
 combined_array = np.concatenate((array1, array2), axis=0)
@@ -17,13 +12,8 @@ combined_array = np.concatenate((array1, array2), axis=0)
 # Check the shape of the combined array
 print(f"Combined array shape: {combined_array.shape}")
 
-<<<<<<< HEAD
-# Use t-SNE to reduce dimensionality from 4096 dimensions to 3 dimensions
-tsne = TSNE(n_components=3, random_state=42)
-=======
 # Use t-SNE to reduce dimensionality from 4096 dimensions to 2 dimensions
 tsne = TSNE(n_components=2, random_state=42)
->>>>>>> 1629d36 (Third modified)
 reduced_array = tsne.fit_transform(combined_array)
 
 # Check the shape of the reduced array
