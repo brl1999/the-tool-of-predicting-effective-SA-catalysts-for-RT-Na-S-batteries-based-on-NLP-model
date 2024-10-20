@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # “Preferable single-atom catalysts enabled by natural language processing for room temperature Na-S batteries” Code Supplement 
 
 This is the official code supplement of *Preferable single-atom catalysts enabled by natural language processing for room temperature Na-S batteries*.
