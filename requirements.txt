@@ -1,17 +1,9 @@
 ollama
 numpy
 pandas
-<<<<<<< HEAD
-sklearn
-=======
 scikit-learn
->>>>>>> 1629d36 (Third modified)
 langchain_community
 opensearchpy
 langchain
 openai
-<<<<<<< HEAD
-
-=======
 opensearch-py
->>>>>>> 1629d36 (Third modified)

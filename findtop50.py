@@ -15,17 +15,6 @@ def normalize_0_1(values):
     return (values - min_val) / (max_val - min_val)
 
 # Load the prediction embeddings
-<<<<<<< HEAD
-prediction = np.load('./prediction.npy')
-
-# Load the embeddings and t-SNE reduced arrays
-embeddings_array = np.load('./240820-3.1.npy')
-reduced_array = np.load('240820-3.1-tsne.npy')
-
-# Initialize empty lists to store the results
-top50indices = [] 
-file_path_1 = './dataset_240820.xlsx'
-=======
 prediction = np.load('./resources/prediction.npy')
 
 # Load the embeddings and t-SNE reduced arrays
@@ -35,7 +24,6 @@ reduced_array = np.load('./resources/240820-3.1-tsne.npy')
 # Initialize empty lists to store the results
 top50indices = [] 
 file_path_1 = './resources/dataset_240820.xlsx'
->>>>>>> 1629d36 (Third modified)
 
 # Read the Excel file containing paper titles and abstracts
 df_dataset = pd.read_excel(file_path_1)
@@ -82,8 +70,4 @@ df = pd.DataFrame({
 })
 
 # Save the DataFrame to an Excel file
-<<<<<<< HEAD
-df.to_excel('pred_top50indices_cos_3.1.xlsx', index=False)
-=======
 df.to_excel('./pred_top50indices_cos_3.1.xlsx', index=False)
->>>>>>> 1629d36 (Third modified)
